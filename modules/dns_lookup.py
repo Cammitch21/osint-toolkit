@@ -1,13 +1,15 @@
 import dns.resolver
-
+from tqdm import tqdm
 
 # Get the different record types (ipv4, ipv6, mail exchange, name servers, canonical names)
 def get_dns_records(domain):
     record_types = ['A', 'AAAA', 'MX', 'NS', 'TXT', 'CNAME'] 
     results = {}
 
+    print(f"\nLooking up DNS Records for {domain}:\n")
+
 # Send a dns query with the record type
-    for rtype in record_types:
+    for rtype in tqdm(record_types, desc="Checking DNS", unit='record', ncols=80):
         try:
             answers = dns.resolver.resolve(domain, rtype)
             records = [] 
