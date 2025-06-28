@@ -1,3 +1,15 @@
+# OSINT TOOLKIT
+Welcome to my OSINT Toolkit that can usilise information you know to enrich your data and discover additional information.
+
+# Disclaimer
+
+The tools in this OSINT Toolkit are only for educational and ethical use. Tools in this kit are only to be used if you have explicit permission from the user/website. I am not responsible for any misuse or harm caused by using the toolkit.
+
+## Navigation
+
+- [DNS Lookup](#dns-lookup-tool)
+- [Username Lookup](#username-lookup-tool)
+
 # DNS Lookup Tool
 
 A simple Python script to query DNS records (A, AAAA, MX, NS, TXT, CNAME) for a given domain.
@@ -25,8 +37,6 @@ py dns_lookup.py
 ```
 Enter a domain when you are prompted
 
-The tools in this OSINT Toolkit are only for educational and ethical use. 
-The DNS Lookup tool is only to be run on websites that you own or have gotten explicit permission from.
 
 # Username Lookup Tool
 
@@ -43,7 +53,7 @@ Allows you to quickly search multiple websites to find a username.
 
  Then run:
 
-````bash
+```bash
 py username_lookup.py
 ```
 
