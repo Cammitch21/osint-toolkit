@@ -1,5 +1,6 @@
 # OSINT TOOLKIT
-Welcome to my OSINT Toolkit that can usilise information you know to enrich your data and discover additional information.
+
+Welcome to my OSINT Toolkit, a collection of Python tools for ethical open-source intelligence gathering.
 
 # Disclaimer
 
