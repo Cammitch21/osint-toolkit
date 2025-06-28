@@ -24,14 +24,3 @@ def check_username(username):
         except requests.RequestException:
             found[site] = None
     return found
-
-if __name__ == "__main__":
-    username = input("Enter Username to check: ").strip()
-    results = check_username(username)
-    # Printing the list
-    print(f"\n Results found for '{username}':\n")
-    for site, url in results.items():
-        if url:
-            print(f"{site}: {url}")
-        else:
-            print(f"{site}: Not Found")

@@ -27,16 +27,3 @@ def get_dns_records(domain):
         except Exception as e:
             results[rtype] = [f"ERROR: {e}"]            
     return results
-
-if __name__ == "__main__":
-    domain = input("Enter the Domain to lookup: ").strip()
-    records = get_dns_records(domain)
-    print(f"\nDNS records found for {domain}:\n")
-    for rtype, values in records.items():
-        print(f"{rtype}:")
-        if values:
-            for v in values:
-                print(f"  -  {v}")
-        else:
-            print("No records found.")       
-        
