@@ -1,5 +1,6 @@
 import requests
 
+# Add or remove sites here to customise the websites you want to search
 sites = {
     "Github": "https://github.com/{}",
     "Linkedin": "https://www.linkedin.com/in/{}",
@@ -14,8 +15,10 @@ def check_username(username):
         url = url_template.format(username)
         try:
             response = requests.get(url, timeout = 2)
+            # Status code 200 will add the url to the list
             if response.status_code == 200:
                 found[site] = url
+            # All other codes are disregarded and not added to the list
             else:
                 found[site] = None
         except requests.RequestException:
@@ -25,7 +28,7 @@ def check_username(username):
 if __name__ == "__main__":
     username = input("Enter Username to check: ").strip()
     results = check_username(username)
-
+    # Printing the list
     print(f"\n Results found for '{username}':\n")
     for site, url in results.items():
         if url:
